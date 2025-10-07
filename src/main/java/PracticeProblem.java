@@ -1,15 +1,18 @@
+import java.util.Arrays;
+
 public class PracticeProblem {
 
 	public static void main(String args[]) {
 		
 	}
 	public static int sequentialSearch(int[] arr, int key) {
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] == key) {
-				return i+1;
+		int counter;
+		for (counter = 0; counter < arr.length; counter++) {
+			if (arr[counter] == key) {
+				return counter +1;
 			}
 		}
-		return -1;
+		return arr.length;
 	}
 	public static int binarySearch(int[] arr, int key) {
 		Arrays.sort(arr);
@@ -29,7 +32,7 @@ public class PracticeProblem {
 				right = mid - 1;
 			}
 		}
-		return -1;
+		return arr.length;
 	}
 	public static int[] compareSearch(int[] givenArr, int givenNum){
 		int[] result = {sequentialSearch(givenArr, givenNum), binarySearch(givenArr, givenNum)};
@@ -41,7 +44,7 @@ public class PracticeProblem {
 				return i+1;
 			}
 		}
-		return -1;
+		return arr.length;
 	}
 	public static int binarySearchStr(String[] arr, String key) {
 		Arrays.sort(arr);
@@ -60,7 +63,7 @@ public class PracticeProblem {
 				right = mid - 1;
 			}
 		}
-		return -1;
+		return arr.length;
 	}
 	public static int[] compareStringSearch(String[] givenArr, String givenWord){
 		int[] result = {sequentialSearchStr(givenArr, givenWord), binarySearchStr(givenArr, givenWord)};
