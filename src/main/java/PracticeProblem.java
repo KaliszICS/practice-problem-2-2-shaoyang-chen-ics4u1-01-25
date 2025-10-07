@@ -5,7 +5,7 @@ public class PracticeProblem {
 	public static void main(String args[]) {
 		
 	}
-	public static int sequentialSearch(int[] arr, int key) {
+		public static int sequentialSearch(int[] arr, int key) {
 		int counter;
 		for (counter = 0; counter < arr.length; counter++) {
 			if (arr[counter] == key) {
@@ -32,7 +32,7 @@ public class PracticeProblem {
 				right = mid - 1;
 			}
 		}
-		return arr.length;
+		return binarySearch;
 	}
 	public static int[] compareSearch(int[] givenArr, int givenNum){
 		int[] result = {sequentialSearch(givenArr, givenNum), binarySearch(givenArr, givenNum)};
@@ -63,7 +63,7 @@ public class PracticeProblem {
 				right = mid - 1;
 			}
 		}
-		return arr.length;
+		return binarySearch;
 	}
 	public static int[] compareStringSearch(String[] givenArr, String givenWord){
 		int[] result = {sequentialSearchStr(givenArr, givenWord), binarySearchStr(givenArr, givenWord)};
